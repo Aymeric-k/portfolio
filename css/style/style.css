@@ -1,0 +1,239 @@
+/* spreadsheet colors 11151d(fond) 222d41 374158 7f5056 d76c58  */
+@font-face {
+    font-family: "Varygraphie";
+    src: url(../font/VarygraphieBold_PERSONAL_USE_ONLY.otf);
+}
+
+:root{
+    --orange-color: #d76c58;
+}
+* {
+    background-color: #11151d;
+    font-family: 'Courier New', Courier, monospace ;
+    padding: 0px;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color : var(--orange-color);
+    text-decoration: none;
+    padding: 13px;
+    transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+a:hover{
+    color:#efefef;
+    
+}
+a:hover~li{
+    color: #efefef;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    color: #d76c58;
+    list-style: none;
+    padding: 0px;
+    align-items: center;
+}
+header{ 
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    padding:  0 50px;
+    opacity: 0.9;
+    backdrop-filter: blur(10px);
+    
+}
+nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+    
+}
+section{
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 100px 0px;
+}
+.corps{
+    padding: 0px 150px;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 90vh;
+    padding: 0px;
+    
+
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.icons li a{
+    padding: 10px;
+    display: inline-block;
+}
+.icons::after, .right::after{
+    content: "";
+    display: block;
+    height: 90px;
+    width: 1px;
+    background-color: #8892b0;
+    margin: 0px auto;
+}
+.left{
+    position: fixed;
+    width: 40px;
+    left: 20px;
+    right: auto;
+    bottom: 0px;
+}
+.right{
+    position: fixed;
+    width: 40px;
+    right: 20px;
+    left: auto;
+    bottom: 0px;
+}
+.right a{
+    writing-mode: vertical-rl;
+    padding: 10px;
+    margin: 20px auto;
+}
+h1{
+    font-size:5rem;
+    color: var(--orange-color);
+    letter-spacing: -13px;
+    font-family: "Varygraphie";
+}
+.name{
+    color: var(--orange-color);
+    font-size: 80px;
+}
+h3{
+    color: #8892b0;
+    font-size: 40px;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #efefef;
+}
+.logo{
+    vertical-align: middle;
+}
+.menu{
+    display: flex;
+    padding-right: 100px;
+    
+}
+.buttonResume{
+    border: 1px solid #d76c58;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.buttonResume:hover{
+    background-color: #d76b5818
+}
+.intro div:first-child p{
+    font-size: 13px;
+    color: #efefef;
+}
+.intro div:last-child p{
+    color: #8892b0;
+    max-width: 740px;
+    margin-top: 2%;
+}
+.cat::before{
+    counter-increment: section 1;
+    content: "0"counter(section)".";
+    color: var(--orange-color);
+    margin-right: 10px;
+}
+.cat{
+    display: flex;
+    color: #efefef;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    margin: 10px 0px 40px;
+    
+}
+.cat::after{
+    content:"";
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #8892b0;
+}
+.godown{
+    color: transparent;
+    width: 100%;
+    height: 100%;
+}
+.fleche{
+    animation:  arrow-up 2s infinite;
+}
+.arrow-down {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ffffff;
+    animation:  arrow-up 1s;
+    margin: 0 auto;
+   
+  }
+  .arrow-up {
+    transform: rotate(180deg);
+  }
+  @keyframes arrow-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes arrow-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+#about{
+    max-width: 900px;
+}
+#about p{
+    color: #8892b0;
+   
+}
+
+
