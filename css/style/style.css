@@ -14,13 +14,16 @@
     margin: 0;
     box-sizing: inherit;
 }
+body{
+    counter-reset: section;
+}
 html{
     scroll-behavior: smooth;
 }
 a{
     color : var(--orange-color);
     text-decoration: none;
-    padding: 13px;
+    margin: 10px;
     transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 
 }
@@ -32,10 +35,12 @@ a:hover~li{
     color: #efefef;
 }
 ul{
+    list-style: none;
+}
+nav ul{
     display: flex;
     justify-content: space-between;
     color: #d76c58;
-    list-style: none;
     padding: 0px;
     align-items: center;
 }
@@ -52,7 +57,9 @@ header{
     z-index: 12;
     
 }
-
+h5{
+    font-size: large;
+}
 nav{
    display: flex;
    justify-content: space-between;
@@ -93,7 +100,9 @@ svg{
     transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1)
     
 }
-
+nav a{
+    padding: 10px;
+}
 svg:hover{
     stroke:#d76c58;
 }
@@ -183,13 +192,14 @@ svg:hover{
     max-width: 740px;
     margin-top: 2%;
 }
-.cat::before{
-    counter-increment: section 1;
+.cat:before{
+    counter-increment: section;
     content: "0"counter(section)".";
     color: var(--orange-color);
     margin-right: 10px;
 }
-.cat{
+.cat{ 
+    
     display: flex;
     color: #efefef;
     position: relative;
@@ -197,9 +207,27 @@ svg:hover{
     width: 100%;
     white-space: nowrap;
     margin: 10px 0px 40px;
-    padding-top: 200px;
+    padding-top: 100px;
     
 }
+.lang{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+.lang li::before{
+    content: "▹";
+    color: var(--orange-color);
+    fill: #d76c58;
+} 
+.lang li{
+    color: #8892b0;
+    margin-bottom: 20px;
+}  
 .cat::after{
     content:"";
     display: block;
@@ -213,7 +241,11 @@ svg:hover{
     width: 100%;
     height: 100%;
 }
-
+.flecheBox{
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+}
 .arrow-down {
     display: block;
     margin: auto;
@@ -267,6 +299,8 @@ svg:hover{
 }
 #about{
     min-height: 80vh;
+    padding-top: 115px;
+
 }
 #about div{
     max-width: 900px;
@@ -282,12 +316,191 @@ svg:hover{
 #about p{
     color: #8892b0;
     font-size: 23px;
-    z-index: 11;
-   
+    z-index: 11; 
 }
-#about div div{
+#about div:nth-of-type(2){
+    min-height: 50vh;
+}
+#about .desc{
     display: flex;
     flex: 1 0 450px;
     flex-wrap: wrap;
 }
+#photo{
+    filter: grayscale(1);
+    transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+#photo:hover{
+    filter: grayscale(0);
+}
 
+/* Xp */
+
+
+.container-exp ul {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    margin-top: 50px;
+    align-items: start;
+    width: max-content;
+    flex: 1;
+
+}
+.container-exp ul li button{
+    border-top: 2px #efefef solid;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 40px;
+    color: #d76c58;
+    width: 400px;
+}
+.barre{
+    height: 400px;
+    width: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #424755;
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(83, 81, 81);
+}
+.miniBarre20202021,.miniBarre20132020{
+    position: absolute;
+    width: 10px;
+    left: -1px;
+    visibility: hidden;
+}
+.miniBarre20202021{
+    top: 99px;
+    height: 34px;
+}
+.miniBarre20132020{
+    top: 138px;
+    height: 260px;
+    
+}
+.miniBarre20202021On,.miniBarre20132020On{
+    visibility: visible;
+    background-color:var(--orange-color);
+    z-index: 15;
+    position: relative ;
+    right: -4px;
+}
+.point2013::before,.point2014::before,.point2015::before,.point2016::before,.point2017::before,.point2018::before,.point2019::before,.point2020::before,.point2021::before,.point2022::before,.point2023::before{
+    content: "●";
+    color: rgb(83, 81, 81) ;
+    position: absolute;
+    font-size: 20px;
+    border-radius: 50%;
+    left: -2px;
+}
+.point2013,.point2014,.point2015,.point2016,.point2017,.point2018,.point2019,.point2020,.point2021,.point2022,.point2023{
+    padding-left: 15px;
+    background: transparent;
+    position: absolute;
+}
+.point2013{
+    top: 385px
+}
+.point2014{
+   top: 347px;
+}
+.point2015{
+   top:311px
+}
+.point2016{
+   top: 273px;
+}
+.point2017{
+   top: 235px
+}
+.point2018{
+   top:197px
+}
+.point2019{
+   top:159px
+}
+.point2020{
+   top:121px
+}
+.point2021{
+    top: 76px
+}
+.point2022{
+    top: 38px;
+}
+.point2023{
+    top: 0px;
+}
+.point2013On::before,.point2014On::before,.point2015On::before,.point2016On::before,.point2017On::before,.point2018On::before,.point2019On::before,.point2020On::before,.point2021On::before,.point2022On::before,.point2023On::before{
+    content: "●";
+    color: var(--orange-color) ;
+    font-size:2em ;
+    left: -6px;
+}
+
+.point2013On,.point2014On,.point2015On,.point2016On,.point2017On,.point2018On,.point2019On,.point2020On,.point2021On,.point2022On,.point2023On{
+    color: rgb(251, 250, 250) ;
+}
+.big-cont{
+    display: flex;
+    justify-content: start;
+    
+}
+.detailsCom, .detailsCor,.detailsUsi, .detailsSta, .detailsPho{
+    width: 300px;  
+    height: 185px;
+    color: white;
+    border: 1px solid white ;
+    font-size: 15px;
+    overflow: hidden;
+}
+.animate {
+    animation: apparition 1s;
+  }
+.detailsCom{
+    margin-top: 186px; 
+}
+.detailsCor{
+    margin-top: 322px; 
+}
+.detailsPho{
+    margin-top: 254px; 
+}
+.detailsSta{
+    margin-top: 50px; 
+}
+.detailsUsi{
+    margin-top: 119px; 
+}
+@keyframes apparition {
+    0%{
+        width: 0px;
+        height: 0;
+    }
+    50%{
+        width:300px;
+        height: 1px;
+    }
+    100%{
+        width:300px;
+        height: 185px;
+    }
+    
+}
+.active{
+    background-color: #3e4e6d;
+}
+
+.detailsCom li,.detailsCor li, .detailsUsi li, .detailsSta li, .detailsPho li{
+    padding:15px;
+    color: white;
+    background: none;
+}
+#xp{
+    min-height:90vh;
+}
+.none{
+    display:none;
+}
